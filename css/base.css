@@ -1,0 +1,145 @@
+/* ================================================
+   BASE — Variables · Reset · Utilidades globales
+   Mayia Design System
+   ================================================ */
+
+:root {
+  /* Colores */
+  --clr-bg:        #ffffff;
+  --clr-dark:      #040d04;
+  --clr-accent:    #a0d46d;
+  --clr-accent-dk: #7ab84e;
+  --clr-muted:     #6b7280;
+  --clr-border:    #e5e7eb;
+  --clr-surface:   #f9fafb;
+
+  /* Tipografía */
+  --ff: 'Inter', system-ui, -apple-system, sans-serif;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    900;
+
+  /* Espaciado & layout */
+  --max-w:       1140px;
+  --section-py:  96px;
+  --radius-sm:   8px;
+  --radius-md:   16px;
+  --radius-lg:   24px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(4,13,4,.06);
+  --shadow-md: 0 4px 20px rgba(4,13,4,.09);
+}
+
+/* --- Reset ----------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html  { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body  {
+  font-family: var(--ff);
+  background: var(--clr-bg);
+  color: var(--clr-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img   { display: block; max-width: 100%; height: auto; }
+a     { color: inherit; text-decoration: none; }
+ul    { list-style: none; }
+button{ cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* --- Layout ---------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+.section        { padding-block: var(--section-py); }
+.section--dark  { background: var(--clr-dark); color: #fff; }
+.section--tint  { background: var(--clr-surface); }
+
+/* --- Tipografía ------------------------------------ */
+.section-title {
+  font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+  font-weight: var(--fw-black);
+  line-height: 1.1;
+  letter-spacing: -.025em;
+}
+.section-sub {
+  font-size: 1.05rem;
+  color: var(--clr-muted);
+  max-width: 540px;
+  margin-top: 14px;
+  line-height: 1.75;
+}
+.section-sub--light { color: rgba(255,255,255,.6); }
+
+/* --- Etiqueta de sección --------------------------- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .72rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--clr-accent-dk);
+  background: rgba(160,212,109,.10);
+  border: 1px solid rgba(160,212,109,.28);
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+.tag--light {
+  color: var(--clr-accent);
+  background: rgba(160,212,109,.08);
+  border-color: rgba(160,212,109,.22);
+}
+
+/* --- Botones --------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: var(--fw-semibold);
+  transition: transform .2s, box-shadow .2s, background .2s, border-color .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn--primary {
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  box-shadow: 0 4px 18px rgba(160,212,109,.3);
+}
+.btn--primary:hover {
+  background: var(--clr-accent-dk);
+  box-shadow: 0 8px 26px rgba(160,212,109,.4);
+}
+.btn--outline {
+  border: 1.5px solid rgba(255,255,255,.22);
+  color: #fff;
+}
+.btn--outline:hover { background: rgba(255,255,255,.07); }
+
+.btn--ghost {
+  border: 1.5px solid var(--clr-border);
+  color: var(--clr-dark);
+}
+.btn--ghost:hover { border-color: var(--clr-accent); color: var(--clr-accent-dk); }
+
+/* --- Animación reveal ------------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible    { opacity: 1; transform: translateY(0); }
+.reveal--d1        { transition-delay: .10s; }
+.reveal--d2        { transition-delay: .20s; }
+.reveal--d3        { transition-delay: .30s; }
+.reveal--d4        { transition-delay: .40s; }

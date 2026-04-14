@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mayia — Inteligencia Artificial que Transforma innovación en resultados. Democratizamos el acceso a la IA en México con FLAI y 30 centros de datos EdgeNet." />
+  <meta name="theme-color" content="#040d04" />
+  <title>Mayia — IA que Transforma México</title>
+
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- ── Estilos globales ───────────────────────── -->
+  <link rel="stylesheet" href="css/base.css" />
+
+  <!-- ── Estilos de cada sección (uno por sección) ── -->
+  <link rel="stylesheet" href="sections/nav/nav.css" />
+  <link rel="stylesheet" href="sections/about/about.css" />
+  <link rel="stylesheet" href="sections/pildoras/pildoras.css" />
+  <link rel="stylesheet" href="sections/hubs/hubs.css" />
+  <link rel="stylesheet" href="sections/academia/academia.css" />
+  <link rel="stylesheet" href="sections/contacto/contacto.css" />
+</head>
+<body>
+
+  <!--
+    Punto de montaje principal.
+    El loader.js inyecta aquí todas las secciones
+    en el orden definido en js/loader.js.
+  -->
+  <div id="app"></div>
+
+  <!-- ── HTML de cada sección (uno por sección) ─── -->
+  <script src="sections/nav/nav.js"></script>
+  <script src="sections/about/about.js"></script>
+  <script src="sections/pildoras/pildoras.js"></script>
+  <script src="sections/hubs/hubs.js"></script>
+  <script src="sections/academia/academia.js"></script>
+  <script src="sections/contacto/contacto.js"></script>
+
+  <!-- ── Ensamblador (une todas las secciones) ──── -->
+  <script src="js/loader.js"></script>
+
+  <!-- ── Lógica de interacción global ───────────── -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

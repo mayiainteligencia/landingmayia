@@ -1,0 +1,113 @@
+/* ================================================
+   SECCIÓN: ACADEMIA MAYIA
+   ================================================ */
+
+.academia {
+  background: var(--clr-surface);
+  padding-block: var(--section-py);
+  position: relative;
+  overflow: hidden;
+}
+.academia__accent-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--clr-accent), transparent);
+}
+
+.academia__header { margin-bottom: 52px; }
+
+/* Grid de cursos */
+.academia__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.course-card {
+  background: var(--clr-bg);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color .25s, box-shadow .25s, transform .25s;
+}
+.course-card:hover {
+  border-color: var(--clr-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+.course-card__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-sm);
+  background: rgba(160,212,109,.1);
+  border: 1px solid rgba(160,212,109,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+.course-card__title {
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+}
+.course-card__desc {
+  font-size: .85rem;
+  color: var(--clr-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+.course-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--clr-border);
+}
+.course-card__duration {
+  font-size: .78rem;
+  color: var(--clr-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.course-card__status {
+  font-size: .72rem;
+  font-weight: var(--fw-semibold);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.course-card__status--soon {
+  background: rgba(160,212,109,.1);
+  color: var(--clr-accent-dk);
+  border: 1px solid rgba(160,212,109,.25);
+}
+
+/* CTA de academia */
+.academia__cta {
+  margin-top: 52px;
+  padding: 40px 36px;
+  background: var(--clr-dark);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.academia__cta-title {
+  font-size: 1.3rem;
+  font-weight: var(--fw-bold);
+  color: #fff;
+  max-width: 480px;
+  line-height: 1.4;
+}
+.academia__cta-title span { color: var(--clr-accent); }
+
+@media (max-width: 600px) {
+  .academia__cta { flex-direction: column; align-items: flex-start; }
+}
