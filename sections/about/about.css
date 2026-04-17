@@ -74,8 +74,10 @@
 /* Bloque de qué hacemos */
 .about-what {
   padding-block: var(--section-py);
-  background: var(--clr-bg);
+  background: transparent;
 }
+.about-what .section-title { color: #fff; }
+.about-what .section-sub   { color: rgba(255,255,255,.6); }
 .about-what__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -93,12 +95,14 @@
   align-items: flex-start;
   gap: 12px;
   padding: 16px 18px;
-  border: 1px solid var(--clr-border);
+  border: 1px solid rgba(160,212,109,.18);
   border-radius: var(--radius-md);
   font-size: .92rem;
-  color: var(--clr-muted);
+  color: rgba(255,255,255,.65);
+  background: rgba(4,13,4,.35);
   transition: border-color .25s, transform .25s;
 }
+.about-what__item strong { color: #fff; }
 .about-what__item:hover {
   border-color: var(--clr-accent);
   transform: translateX(4px);
@@ -117,9 +121,11 @@
 
 /* Cards de pilares */
 .about-pillars {
-  background: var(--clr-surface);
+  background: transparent;
   padding-block: var(--section-py);
 }
+.about-pillars .section-title { color: #fff; }
+.about-pillars .section-sub   { color: rgba(255,255,255,.6); }
 .about-pillars__header { margin-bottom: 48px; }
 .about-pillars__grid {
   display: grid;
@@ -127,8 +133,8 @@
   gap: 20px;
 }
 .pillar-card {
-  background: var(--clr-bg);
-  border: 1px solid var(--clr-border);
+  background: rgba(4,13,4,.5);
+  border: 1px solid rgba(160,212,109,.18);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
   display: flex;
@@ -138,7 +144,7 @@
 }
 .pillar-card:hover {
   border-color: var(--clr-accent);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 24px rgba(160,212,109,.12);
   transform: translateY(-4px);
 }
 .pillar-card__num {
@@ -150,10 +156,11 @@
 .pillar-card__title {
   font-size: 1rem;
   font-weight: var(--fw-bold);
+  color: #fff;
 }
 .pillar-card__desc {
   font-size: .88rem;
-  color: var(--clr-muted);
+  color: rgba(255,255,255,.55);
   line-height: 1.65;
 }
 
