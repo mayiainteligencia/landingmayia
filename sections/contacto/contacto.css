@@ -134,18 +134,12 @@
   gap: 16px;
   flex-wrap: wrap;
 }
-.contacto__brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.contacto__footer-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  opacity: .85;
 }
-.contacto__brand img { height: 26px; object-fit: contain; }
-.contacto__brand-name {
-  font-size: .95rem;
-  font-weight: var(--fw-bold);
-  color: #fff;
-}
-.contacto__brand-name span { color: var(--clr-accent); }
 .contacto__copy {
   font-size: .78rem;
   color: rgba(255,255,255,.25);

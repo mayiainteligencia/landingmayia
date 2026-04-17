@@ -42,9 +42,24 @@ window.SECTIONS.contacto = /* html */`
       <!-- Redes sociales -->
       <nav class="contacto__socials" aria-label="Redes sociales de Mayia">
 
+        <!-- Sitio web -->
+        <a
+          href="https://mayia.mx"
+          class="social-card"
+          aria-label="Visita el sitio web de Mayia"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+            <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm-1 17.93V18h2v1.93A8.001 8.001 0 0 1 4.07 13H6v-2H4.07A8.001 8.001 0 0 1 11 4.07V6h2V4.07A8.001 8.001 0 0 1 19.93 11H18v2h1.93A8.001 8.001 0 0 1 13 19.93z"/>
+          </svg>
+          <span class="social-card__name">mayia.mx</span>
+        </a>
+
         <!-- Instagram -->
         <a
-          href="https://instagram.com/mayia.mx"
+          href="https://www.instagram.com/mayia.inteligencia.artificial/"
           class="social-card"
           aria-label="Síguenos en Instagram"
           target="_blank"
@@ -58,7 +73,7 @@ window.SECTIONS.contacto = /* html */`
 
         <!-- Facebook -->
         <a
-          href="https://facebook.com/mayia.mx"
+          href="https://www.facebook.com/MAYiaInteligenciaArtificial/"
           class="social-card"
           aria-label="Síguenos en Facebook"
           target="_blank"
@@ -72,7 +87,7 @@ window.SECTIONS.contacto = /* html */`
 
         <!-- LinkedIn -->
         <a
-          href="https://linkedin.com/company/mayia"
+          href="https://www.linkedin.com/company/mayia-edgenet/posts/?feedView=all"
           class="social-card"
           aria-label="Síguenos en LinkedIn"
           target="_blank"
@@ -89,17 +104,8 @@ window.SECTIONS.contacto = /* html */`
 
     <!-- Footer strip -->
     <div class="contacto__footer-strip">
-      <div class="contacto__brand">
-        <img
-          src="assets/mayiaLogo.png"
-          alt="Mayia"
-          onerror="this.style.display='none'"
-        />
-        <span class="contacto__brand-name">mayia<span>.</span></span>
-      </div>
-      <p class="contacto__copy">
-        © 2025 Mayia · FLAI · EdgeNet — IA Soberana de México
-      </p>
+      <img src="assets/mayiaLogoBlanco.png" alt="Mayia" class="contacto__footer-logo" />
+      <p class="contacto__copy">© 2026 MAYIA</p>
     </div>
 
   </div>

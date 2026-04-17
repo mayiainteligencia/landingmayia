@@ -31,7 +31,7 @@
   flex-shrink: 0;
 }
 .nav__logo img {
-  height: 34px;
+  height: 32px;
   width: auto;
   object-fit: contain;
 }
@@ -107,4 +107,5 @@
   .nav__links      { display: none; }
   .nav__cta        { display: none; }
   .nav__hamburger  { display: flex; }
+  .nav__logo img   { height: 24px; }
 }

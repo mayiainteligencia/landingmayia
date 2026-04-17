@@ -62,6 +62,28 @@
       revealEls.forEach(function (el) { el.classList.add('visible'); });
     }
 
+    /* ── Academia: filtros por categoría ────────── */
+    const filterBtns = document.querySelectorAll('.academia__filter-btn');
+    const courseCards = document.querySelectorAll('#academia-grid .course-card');
+
+    if (filterBtns.length && courseCards.length) {
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(function (b) { b.classList.remove('academia__filter-btn--active'); });
+          btn.classList.add('academia__filter-btn--active');
+
+          var filter = btn.getAttribute('data-filter');
+          courseCards.forEach(function (card) {
+            if (filter === 'todos' || card.getAttribute('data-cat') === filter) {
+              card.classList.remove('course-card--hidden');
+            } else {
+              card.classList.add('course-card--hidden');
+            }
+          });
+        });
+      });
+    }
+
     /* ── Nav: resaltado de sección activa ──────── */
     const sections  = document.querySelectorAll('section[id]');
     const navLinks  = document.querySelectorAll('.nav__links a[href^="#"]');

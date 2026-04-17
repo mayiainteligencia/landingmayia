@@ -12,11 +12,9 @@ window.SECTIONS.nav = /* html */`
       <!-- Logo -->
       <a href="#nosotros" class="nav__logo" aria-label="Mayia — Inicio">
         <img
-          src="assets/mayiaLogo.png"
+          src="assets/mayiaLogoBlanco.png"
           alt="Mayia"
-          onerror="this.style.display='none'"
         />
-        <span class="nav__logo-text">mayia<span>.</span></span>
       </a>
 
       <!-- Links desktop -->

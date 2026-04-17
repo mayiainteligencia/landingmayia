@@ -12,6 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
 
+  <!-- ── React + Babel (para componentes JSX) ──── -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
   <!-- ── Estilos globales ───────────────────────── -->
   <link rel="stylesheet" href="css/base.css" />
 
@@ -42,7 +47,7 @@
   <script src="sections/nav/nav.js"></script>
   <script src="sections/about/about.js"></script>
   <script src="sections/pildoras/pildoras.js"></script>
-  <script src="sections/hubs/hubs.js"></script>
+  <script src="sections/hubs/hubs-mount.js"></script>
   <script src="sections/academia/academia.js"></script>
   <script src="sections/contacto/contacto.js"></script>
 
@@ -51,6 +56,9 @@
 
   <!-- ── Lógica de interacción global ───────────── -->
   <script src="js/main.js"></script>
+
+  <!-- ── Componente React del mapa ─────────────── -->
+  <script type="text/babel" src="sections/hubs/hubs.jsx"></script>
 
 </body>
 </html>

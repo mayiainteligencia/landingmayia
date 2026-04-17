@@ -7,12 +7,31 @@ window.SECTIONS.about = /* html */`
 
 <!-- ── HERO ──────────────────────────────────── -->
 <section id="nosotros" class="about-hero">
-  <div class="about-hero__grid" aria-hidden="true"></div>
+  <div class="about-hero__grid" aria-hidden="true">
+    <div class="about-hero__cell" style="top:56px;  left:112px; --delay:0s;   --dur:2.8s"></div>
+    <div class="about-hero__cell" style="top:168px; left:336px; --delay:1.2s; --dur:3.5s"></div>
+    <div class="about-hero__cell" style="top:0px;   left:504px; --delay:2.4s; --dur:2.5s"></div>
+    <div class="about-hero__cell" style="top:112px; left:672px; --delay:0.6s; --dur:4s"></div>
+    <div class="about-hero__cell" style="top:224px; left:224px; --delay:3.1s; --dur:3.2s"></div>
+    <div class="about-hero__cell" style="top:56px;  left:840px; --delay:1.8s; --dur:2.6s"></div>
+    <div class="about-hero__cell" style="top:280px; left:448px; --delay:4s;   --dur:3.8s"></div>
+    <div class="about-hero__cell" style="top:168px; left:56px;  --delay:2.9s; --dur:3s"></div>
+    <div class="about-hero__cell" style="top:336px; left:280px; --delay:0.4s; --dur:4.2s"></div>
+    <div class="about-hero__cell" style="top:224px; left:616px; --delay:3.6s; --dur:2.9s"></div>
+    <div class="about-hero__cell" style="top:112px; left:504px; --delay:5s;   --dur:3.4s"></div>
+    <div class="about-hero__cell" style="top:392px; left:168px; --delay:1.5s; --dur:3.1s"></div>
+  </div>
   <div class="about-hero__glow"  aria-hidden="true"></div>
 
   <div class="container">
     <div class="about-hero__inner">
-      <p class="about-hero__eyebrow reveal">FLAI · EdgeNet · México</p>
+      <div class="about-hero__eyebrow reveal">
+        <img src="assets/flai.png"               alt="FLAI"          class="about-hero__eyebrow-logo" />
+        <span class="about-hero__eyebrow-sep" aria-hidden="true"></span>
+        <img src="assets/edgeNetLogoBlanco.png"  alt="EdgeNet"       class="about-hero__eyebrow-logo" />
+        <span class="about-hero__eyebrow-sep" aria-hidden="true"></span>
+        <img src="assets/hechoMexicoRojo.PNG"    alt="Hecho en México" class="about-hero__eyebrow-logo" />
+      </div>
 
       <h1 class="about-hero__title reveal reveal--d1">
         Inteligencia Artificial<br>
@@ -55,28 +74,24 @@ window.SECTIONS.about = /* html */`
 
       <ul class="about-what__list">
         <li class="about-what__item">
-          <span class="about-what__icon" aria-hidden="true">🛡️</span>
           <span>
             <strong>Soberanía de datos</strong> — Tu información permanece
             en suelo mexicano, dentro de los centros EdgeNet.
           </span>
         </li>
         <li class="about-what__item">
-          <span class="about-what__icon" aria-hidden="true">🤝</span>
           <span>
             <strong>Acompañamiento integral</strong> — Expertos dedicados
             desde el diseño de la solución hasta su operación continua.
           </span>
         </li>
         <li class="about-what__item">
-          <span class="about-what__icon" aria-hidden="true">⚡</span>
           <span>
             <strong>Resultados medibles</strong> — Implementaciones orientadas
             a reducir costos, automatizar procesos y generar valor real.
           </span>
         </li>
         <li class="about-what__item">
-          <span class="about-what__icon" aria-hidden="true">🇲🇽</span>
           <span>
             <strong>Presencia nacional</strong> — 14 estados activos y
             expansión continua a lo largo del territorio.
