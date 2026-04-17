@@ -85,16 +85,8 @@ function HubsSection() {
   const clickCountRef = useRef(0);
 
   const handleEstadoClick = (e, id) => {
-    clickCountRef.current += 1;
-    clearTimeout(clickTimerRef.current);
-    clickTimerRef.current = setTimeout(() => {
-      if (clickCountRef.current >= 2) {
-        // doble click → navegar
-        const hub = HUBS_ACTIVOS[id];
-        if (hub) window.open(hub.url, '_blank');
-      }
-      clickCountRef.current = 0;
-    }, 280);
+    const hub = HUBS_ACTIVOS[id];
+    if (hub) window.open(hub.url, '_blank');
   };
 
   const handleMouseMove = (e, id) => {
@@ -107,17 +99,17 @@ function HubsSection() {
     const isHovered = hovered === id;
     if (isActive) {
       return {
-        fill:        isHovered ? 'rgba(30,120,255,0.9)'  : 'rgba(30,100,220,0.75)',
-        stroke:      isHovered ? '#7eb8ff' : '#4a90ff',
+        fill:        isHovered ? 'rgba(160,212,109,0.55)'  : 'rgba(160,212,109,0.35)',
+        stroke:      isHovered ? '#a0d46d' : 'rgba(160,212,109,0.8)',
         strokeWidth: isHovered ? 1.6 : 1.1,
-        filter:      isHovered ? 'drop-shadow(0 0 10px rgba(70,140,255,0.7))' : 'drop-shadow(0 0 4px rgba(30,100,220,0.4))',
+        filter:      isHovered ? 'drop-shadow(0 0 10px rgba(160,212,109,0.7))' : 'drop-shadow(0 0 4px rgba(160,212,109,0.3))',
         cursor:      'pointer',
         transition:  'all 0.2s ease',
       };
     }
     return {
-      fill:        'rgba(255,255,255,0.04)',
-      stroke:      'rgba(255,255,255,0.12)',
+      fill:        '#000',
+      stroke:      'rgba(255,255,255,0.35)',
       strokeWidth: 0.5,
       cursor:      'default',
       transition:  'all 0.2s ease',
@@ -137,23 +129,23 @@ function HubsSection() {
             position: 'fixed',
             left: tooltip.x + 14,
             top:  tooltip.y - 40,
-            background: 'rgba(4,13,28,0.97)',
-            border: '1px solid rgba(70,140,255,0.55)',
+            background: 'rgba(4,13,4,0.97)',
+            border: '1px solid rgba(160,212,109,0.55)',
             borderRadius: '10px',
             padding: '9px 16px',
             fontSize: '12px',
             fontWeight: '700',
-            color: '#7eb8ff',
+            color: '#a0d46d',
             pointerEvents: 'none',
             zIndex: 999,
             whiteSpace: 'nowrap',
             backdropFilter: 'blur(10px)',
-            boxShadow: '0 4px 24px rgba(30,100,220,0.25)',
+            boxShadow: '0 4px 24px rgba(160,212,109,0.2)',
           }}
         >
           🌐 {tooltipHub.nombre}
           <span style={{ marginLeft: 8, color: '#fff', fontWeight: 400 }}>
-            — Doble clic para visitar
+            — Clic para visitar
           </span>
         </div>
       )}
@@ -227,7 +219,7 @@ function HubsSection() {
               x={470} y={293}
               textAnchor="middle"
               style={{
-                fill: 'rgba(180,210,255,0.85)',
+                fill: 'rgba(160,212,109,0.7)',
                 fontSize: '7.5px',
                 fontWeight: 600,
                 fontFamily: 'system-ui, sans-serif',
@@ -245,8 +237,8 @@ function HubsSection() {
               { x: 442, y: 390, id: 'MX_GT' },
             ].map(({ x, y, id }) => (
               <g key={`dot-${id}`}>
-                <circle cx={x} cy={y} r="5" fill="rgba(30,100,255,0.35)" />
-                <circle cx={x} cy={y} r="3" fill="#4a90ff" />
+                <circle cx={x} cy={y} r="5" fill="rgba(160,212,109,0.35)" />
+                <circle cx={x} cy={y} r="3" fill="#a0d46d" />
                 <circle cx={x} cy={y} r="1.5" fill="#fff" />
               </g>
             ))}
@@ -255,69 +247,12 @@ function HubsSection() {
           {/* ── Leyenda ── */}
           <div className="hubs__legend">
             <div className="hubs__legend-item">
-              <div style={{ width: 12, height: 12, borderRadius: 3, background: 'rgba(30,100,220,0.75)', border: '1px solid #4a90ff', flexShrink: 0 }} />
-              <span>Hub Digital Activo — doble clic para visitar</span>
-            </div>
-            <div className="hubs__legend-item">
-              <div className="hubs__legend-dot" />
-              <span>Próximamente</span>
+              <div style={{ width: 12, height: 12, borderRadius: 3, background: 'rgba(160,212,109,0.35)', border: '1px solid rgba(160,212,109,0.8)', flexShrink: 0 }} />
+              <span>Haz clic en un estado <strong style={{ color: '#a0d46d' }}>verde</strong> para visitar su Hub Digital</span>
             </div>
           </div>
         </div>
 
-        {/* ── Cards de hubs ── */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-          gap: '14px',
-          marginTop: '40px',
-        }}>
-          {[
-            { id: 'MX_YU',  label: 'Yucatán',     url: 'https://www.hubdigital.com.mx/',            emoji: '🌴' },
-            { id: 'MX_JA',  label: 'Jalisco',      url: 'https://jalisco.hubdigital.com.mx/',        emoji: '🏖️' },
-            { id: 'MX_NL',  label: 'Nuevo León',   url: 'https://nuevoleon.hubdigital.com.mx/',      emoji: '🏙️' },
-            { id: 'MX_MTY', label: 'Monterrey',    url: 'https://monterrey.hubdigital.com.mx/',      emoji: '⛰️' },
-            { id: 'MX_GT',  label: 'León',         url: 'https://leon.hubdigital.com.mx/',           emoji: '🦁' },
-          ].map((h) => (
-            <a
-              key={h.id}
-              href={h.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '18px 12px',
-                background: 'rgba(30,100,220,0.08)',
-                border: '1px solid rgba(70,140,255,0.25)',
-                borderRadius: '14px',
-                textDecoration: 'none',
-                transition: 'all 0.2s ease',
-                cursor: 'pointer',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(30,100,220,0.2)';
-                e.currentTarget.style.borderColor = 'rgba(70,140,255,0.7)';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(30,100,220,0.08)';
-                e.currentTarget.style.borderColor = 'rgba(70,140,255,0.25)';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-              <span style={{ fontSize: '1.6rem' }}>{h.emoji}</span>
-              <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#7eb8ff', textAlign: 'center' }}>
-                Hub {h.label}
-              </span>
-              <span style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.4)', textAlign: 'center' }}>
-                hubdigital.com.mx
-              </span>
-            </a>
-          ))}
-        </div>
       </div>
     </section>
   );
