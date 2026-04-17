@@ -25,33 +25,43 @@ window.SECTIONS.about = /* html */`
 
   <div class="container">
     <div class="about-hero__inner">
-      <div class="about-hero__eyebrow reveal">
-        <img src="assets/flai.png"               alt="FLAI"          class="about-hero__eyebrow-logo" />
-        <span class="about-hero__eyebrow-sep" aria-hidden="true"></span>
-        <img src="assets/edgeNetLogoBlanco.png"  alt="EdgeNet"       class="about-hero__eyebrow-logo" />
-        <span class="about-hero__eyebrow-sep" aria-hidden="true"></span>
-        <img src="assets/hechoMexicoRojo.PNG"    alt="Hecho en México" class="about-hero__eyebrow-logo" />
+
+      <!-- Columna texto -->
+      <div class="about-hero__text">
+        <div class="about-hero__eyebrow reveal">
+          <img src="assets/flai.png"               alt="FLAI"            class="about-hero__eyebrow-logo about-hero__eyebrow-logo--flai" />
+          <span class="about-hero__eyebrow-sep" aria-hidden="true"></span>
+          <img src="assets/LOGO-SUPER.png"  alt="EdgeNet"         class="about-hero__eyebrow-logo" />
+          <span class="about-hero__eyebrow-sep" aria-hidden="true"></span>
+          <img src="assets/hechoMexicoRojo.PNG"    alt="Hecho en México" class="about-hero__eyebrow-logo" />
+        </div>
+
+        <h1 class="about-hero__title reveal reveal--d1">
+          Inteligencia Artificial<br>
+          que <em>transforma</em><br>
+          innovación en resultados.
+        </h1>
+
+        <p class="about-hero__desc reveal reveal--d2">
+          Democratizamos el acceso a la Inteligencia Artificial en México.
+          Fabricamos, adaptamos y comercializamos soluciones de IA respaldadas
+          por <strong style="color:#fff">FLAI</strong> — nuestra nube soberana mexicana —
+          desde los 30 centros de datos <strong style="color:#fff">EdgeNet</strong>,
+          con seguridad, gobernanza y acompañamiento integral para empresas y gobiernos.
+        </p>
+
+        <div class="about-hero__cta reveal reveal--d3">
+          <a href="#contacto" class="btn btn--primary">
+            Hablar con un experto →
+          </a>
+        </div>
       </div>
 
-      <h1 class="about-hero__title reveal reveal--d1">
-        Inteligencia Artificial<br>
-        que <em>transforma</em><br>
-        innovación en resultados.
-      </h1>
-
-      <p class="about-hero__desc reveal reveal--d2">
-        Democratizamos el acceso a la Inteligencia Artificial en México.
-        Fabricamos, adaptamos y comercializamos soluciones de IA respaldadas
-        por <strong style="color:#fff">FLAI</strong> — nuestra nube soberana mexicana —
-        desde los 30 centros de datos <strong style="color:#fff">EdgeNet</strong>,
-        con seguridad, gobernanza y acompañamiento integral para empresas y gobiernos.
-      </p>
-
-      <div class="about-hero__cta reveal reveal--d3">
-        <a href="#contacto" class="btn btn--primary">
-          Hablar con un experto →
-        </a>
+      <!-- Columna imagen -->
+      <div class="about-hero__image reveal reveal--d2">
+        <img src="assets/robotMayia.png" alt="Robot Mayia" class="about-hero__robot" />
       </div>
+
     </div>
   </div>
 </section>

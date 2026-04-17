@@ -153,9 +153,30 @@
 .academia__cta-title span { color: var(--clr-accent); }
 
 @media (max-width: 600px) {
-  .academia__cta { flex-direction: column; align-items: flex-start; }
-  .academia__grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 420px) {
-  .academia__grid { grid-template-columns: 1fr; }
+  .academia                  { padding-block: 48px; }
+  .academia__header          { margin-bottom: 24px; }
+  .academia__filters         { margin-bottom: 20px; gap: 6px; }
+  .academia__filter-btn      { padding: 5px 13px; font-size: .74rem; }
+
+  .academia__grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+    padding-bottom: 12px;
+    grid-template-columns: unset;
+  }
+  .academia__grid::-webkit-scrollbar { height: 3px; }
+  .academia__grid::-webkit-scrollbar-thumb { background: rgba(160,212,109,.3); border-radius: 99px; }
+
+  .course-card {
+    min-width: 200px;
+    max-width: 200px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  .academia__cta             { flex-direction: column; align-items: flex-start; margin-top: 32px; padding: 24px 20px; }
 }
