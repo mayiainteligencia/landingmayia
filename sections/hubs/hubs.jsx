@@ -166,11 +166,12 @@ function HubsSection() {
         </div>
 
         {/* ── Mapa + Leyenda ── */}
-        <div className="hubs__map-container">
+        <div className="hubs__map-wrap">
+          <div className="hubs__map-container">
           <svg
             viewBox="0 0 959 593"
             className="hubs__map"
-            style={{ width: '100%', height: 'auto', display: 'block', overflow: 'visible' }}
+            style={{ display: 'block' }}
             onMouseLeave={() => { setHovered(null); setTooltip(null); }}
           >
             {/* Fondo sutil */}
@@ -243,6 +244,7 @@ function HubsSection() {
               </g>
             ))}
           </svg>
+        </div>{/* cierra hubs__map-container */}
 
           {/* ── Leyenda ── */}
           <div className="hubs__legend">
@@ -251,6 +253,40 @@ function HubsSection() {
               <span>Haz clic en un estado <strong style={{ color: '#a0d46d' }}>verde</strong> para visitar su Hub Digital</span>
             </div>
           </div>
+        </div>{/* cierra hubs__map-wrap */}
+
+        {/* Hint scroll — solo visible en mobile via CSS */}
+        <p className="hubs__scroll-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          Desliza para explorar el mapa
+        </p>
+
+        {/* ── Cards mobile (ocultas en desktop via CSS) ── */}
+        <div className="hubs__mobile-cards">
+          {Object.entries(HUBS_ACTIVOS).map(([id, hub]) => (
+            <a
+              key={id}
+              href={hub.url}
+              className="hub-card"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visitar Hub Digital ${hub.nombre}`}
+            >
+              <div className="hub-card__left">
+                <div className="hub-card__dot">
+                  <div className="hub-card__dot-inner" />
+                </div>
+                <div>
+                  <div className="hub-card__name">{hub.nombre}</div>
+                  <div className="hub-card__url">{hub.url.replace('https://', '')}</div>
+                </div>
+              </div>
+              <svg className="hub-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+              </svg>
+            </a>
+          ))}
+          <p className="hubs__mobile-note">Toca cualquier hub para visitarlo</p>
         </div>
 
       </div>
